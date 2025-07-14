@@ -1,5 +1,5 @@
 {
-  "name": "bilibilisleep",
+  "name": "esp-hardware-server",
   "type": "commonjs",
   "version": "0.0.1",
   "private": true,
@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=dev nest build core",
-    "dev": "cross-env NODE_ENV=dev nest start bilibilisleep",
+    "dev": "cross-env NODE_ENV=dev nest start server",
+    "micro:mqtt": "cross-env NODE_ENV=dev nest start mqtt",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "db:gen": "prisma generate",
@@ -55,6 +56,7 @@
     "ioredis": "^5.6.0",
     "lodash": "^4.17.21",
     "luxon": "^3.5.0",
+    "mqtt": "^5.13.2",
     "ms": "3.0.0-canary.1",
     "nats": "^2.29.2",
     "nest-winston": "^1.10.2",

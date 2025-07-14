@@ -1,14 +1,14 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { PlayModule } from './../src/play.module';
+import { MqttModule } from './../src/mqtt.module';
 
-describe('PlayController (e2e)', () => {
+describe('MqttController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [PlayModule],
+      imports: [MqttModule],
     }).compile();
 
     app = moduleFixture.createNestApplication();
